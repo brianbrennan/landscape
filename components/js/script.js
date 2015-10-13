@@ -1,4 +1,18 @@
 var colorTimes = [
+
+	{
+		"time":"green-time",
+		"start":"10",
+		"end":"2",
+		"colors":{
+			"dark":"#266352",
+			"mid_dark":"#128061",
+			"mid_light":"#53C0A2",
+			"light":"#B5F7E6",
+			"water":"#51DACF",
+			"sun":"#E8FFB1"
+		}
+	},
 	{
 		"time":"midday",
 		"start":"10",
@@ -11,6 +25,7 @@ var colorTimes = [
 			"water":"#F5F093"
 		}
 	}
+
 
 ]
 
@@ -30,6 +45,8 @@ function Landscape(time){
 }
 
 
+
+
 //Get Time in Hours
 S.ready(function(){
 	var date = new Date();
@@ -45,6 +62,11 @@ S.ready(function(){
 	s('#mountain1').css('fill',landscape.colors.mid_dark);
 	s('#trees polygon').css('fill',landscape.colors.mid_dark);
 	s('#foreground').css('fill',landscape.colors.dark);
-	s('.landscape').css('background-color',landscape.colors.water);
+	s('.content').css('background-color',landscape.colors.dark);
+	
+	s('.landscape').css('background','-webkit-linear-gradient(' + landscape.colors.water + ',' + landscape.colors.sun + ')');
+	s('#forelake').css('fill',landscape.colors.water);
+	s('#midlakelake').css('fill',landscape.colors.water);
+	s('#backlake_1_').css('fill',landscape.colors.water);
 
 });
