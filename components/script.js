@@ -1,0 +1,1 @@
+function Landscape(a){a>=4&&10>a?this.color="pink":a>=10&&14>a?this.color="aqua":a>=14&&18>a?this.color="orange":a>=18&&24>a?this.color="black":(24==a||4>a)&&(this.color="purple")}S.ready(function(){var a=new Date,b=a.getHours();new Landscape(b),skrollr.init()});

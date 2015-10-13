@@ -32,8 +32,42 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-@-webkit-keyframes color-change { }
+body {
+  height: 1000px; }
 
-@-moz-keyframes color-change { }
+.landscape {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: -10;
+  top: 0; }
+  .landscape .foreground {
+    background-color: #152744;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 750px; }
+  .landscape .midground {
+    background-color: #367591;
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 500px; }
+  .landscape .background {
+    background-color: #61D2B4;
+    height: 200px;
+    top: 300px;
+    width: 100%;
+    position: absolute; }
+  .landscape .sky {
+    background-color: #9DFDC7;
+    height: 300px;
+    width: 100%;
+    position: absolute; }
 
-@keyframes color-change { }
+.content {
+  background-color: #152744;
+  height: 100%;
+  z-index: 100;
+  margin-top: 1080px; }
