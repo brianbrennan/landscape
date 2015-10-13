@@ -1,14 +1,31 @@
+var colorTimes = [
+	{
+		"time":"midday",
+		"start":"10",
+		"end":"2",
+		"colors":{
+			"dark":"#152744",
+			"mid_dark":"#367591",
+			"mid_light":"#61D2B4",
+			"light":"#9DFDC7",
+			"water":"#F5F093"
+		}
+	}
+
+]
+
+
 function Landscape(time){
 	if(time >= 4 && time < 10){
-		this.color = "pink";
+		this.colors = colorTimes[0].colors;
 	} else if(time >= 10 && time < 14){
-		this.color = "aqua";
+		this.colors = colorTimes[0].colors;
 	} else if(time >= 14 && time < 18){
-		this.color = "orange";
+		this.colors = colorTimes[0].colors;
 	} else if(time >= 18 && time < 24){
-		this.color = 'black';
+		this.colors = colorTimes[0].colors;
 	} else if(time == 24 || time < 4){
-		this.color = 'purple';
+		this.colors = colorTimes[0].colors;
 	}
 }
 
@@ -22,5 +39,12 @@ S.ready(function(){
 	var landscape = new Landscape(hours);
 
 	var skroll = skrollr.init();
+
+	s('#backmountains').css('fill',landscape.colors.light);
+	s('#mountain2').css('fill',landscape.colors.mid_light);
+	s('#mountain1').css('fill',landscape.colors.mid_dark);
+	s('#trees polygon').css('fill',landscape.colors.mid_dark);
+	s('#foreground').css('fill',landscape.colors.dark);
+	s('.landscape').css('background-color',landscape.colors.water);
 
 });
