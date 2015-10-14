@@ -1,4 +1,17 @@
 var colorTimes = [
+	{
+		"time":"blue-time",
+		"start":"10",
+		"end":"2",
+		"colors":{
+			"dark":"#555273",
+			"mid_dark":"#65799B",
+			"mid_light":"#B6D5E1",
+			"light":"#E2EFF1",
+			"water":"#9BE8F9",
+			"sun":"#FF7070"
+		}
+	},
 
 	{
 		"time":"green-time",
